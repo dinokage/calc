@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import {useState} from 'react'
 import './App.css';
 
@@ -14,13 +13,13 @@ function App() {
     return (
       <div>
         <h1>{result}</h1>
-        <input type='number' onChange={handleChange} value={input} />
+        <input autoFocus type='number' onChange={handleChange} value={input} />
       </div>
     )
   }
 
   const add = () => {
-    setResult(result+input)
+    setResult(+result + +input)
   }
   const sub = () => {
     setResult(result-input)
